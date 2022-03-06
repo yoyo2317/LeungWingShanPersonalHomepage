@@ -1,0 +1,464 @@
+<!---Leung Wing Shan 21023281d--->
+<!---Mid project--->
+<html>
+
+<head>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        h1 {
+            font-family: 'Open Sans';
+            font-weight: 400;
+            color: rgb(255, 255, 255);
+            font: bold;
+            font-size: 70px;
+        }
+
+        h2 {
+            color: #6b8778;
+            width: 50%;
+            text-align: center;
+            align-items: inherit;
+            position: relative;
+            left: 25%;
+        }
+
+
+
+        header {
+            display: block;
+            background-color: rgb(122, 173, 125);
+            width: 100%;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .wrapper {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            display: block;
+            width: 100%;
+            padding-top: 122.5px;
+        }
+
+        footer {
+            background-color: rgb(122, 173, 125);
+            width: 100%;
+            border: none;
+            text-align: center;
+            padding: 3px;
+            height: 100px;
+            margin-bottom: -50px;
+        }
+
+        div {
+            display: block;
+        }
+
+
+
+        .headerinside {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 10px 10px;
+            border: 2px;
+            max-width: 110px;
+            padding: 20px;
+            padding-left: 60px;
+
+
+        }
+
+        .set {
+            position: relative;
+            min-height: 800px;
+            height: 100%;
+
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax1 {
+
+            background-image: url(https://wallpaperaccess.com/full/51426.jpg);
+
+        }
+
+        .parallax2 {
+
+            background-color: white;
+            height: 600px;
+
+        }
+
+        .parallax3 {
+            background: url(https://wallpaperaccess.com/full/417644.jpg);
+            min-height: 300px;
+            height: 500px;
+        }
+
+        .parallax4 {
+            background: linear-gradient(225deg, #54b1ae, #6f3397);
+
+        }
+
+        .contain {
+            position: absolute;
+            margin-left: 40%;
+            top: 150px;
+            width: 100%;
+            height: 600px;
+            width: 800px;
+        }
+
+        .openingword {
+            width: 100%;
+            overflow: hidden;
+            max-width: 500px;
+            position: relative;
+
+
+        }
+
+        .openingleft {
+            width: 20px;
+            height: 90px;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            animation-name: op;
+            animation-duration: 3s;
+            top: 130px;
+            max-width: 500px;
+            left: -25px;
+
+        }
+
+
+        .openingword h1 {
+            animation: 2s slide-right 2.6s forwards;
+            transform: translateX(-100%);
+        }
+
+
+        @keyframes op {
+            0% {
+                background-color: rgb(255, 255, 255);
+                left: -25;
+                top: 130px;
+            }
+
+            50% {
+                background-color: rgb(83, 83, 83);
+                left: 16%;
+                top: 130px;
+            }
+
+            100% {
+                background-color: rgb(255, 255, 255);
+                left: -25;
+                top: 130px;
+            }
+        }
+
+        @keyframes slide-right {
+            to {
+                transform: translateX(0);
+            }
+        }
+
+
+        .intro {
+            position: relative;
+            overflow: hidden;
+            background-color: #fff;
+            align-items: center;
+            padding-bottom: 40px;
+        }
+
+        .name {
+            text-align: center;
+            color: black;
+            font-size: 50px;
+        }
+
+        .description {
+            display: inline-block;
+            position: absolute;
+            left: 350px;
+            top: 40px;
+        }
+
+        .popset {
+            position: relative;
+            display: inline-block;
+            top: -50px;
+
+        }
+
+        .topimg {
+            position: absolute;
+            left: 0px;
+        }
+
+        .popset:hover .topimg {
+            display: none;
+        }
+
+        .descriptionp {
+            background-color: rgba(100, 100, 109, 0.247);
+            display: inline-block;
+            margin: 30px;
+            width: 40%;
+            color: black;
+            font-size: 25px;
+            font-weight: 5px;
+            text-align: center;
+            margin-top: 50px;
+            padding: 25px;
+            border-radius: 5%;
+            margin-left: 40px;
+            overflow: hidden;
+        }
+
+
+        .tableset {
+            position: absolute;
+            top: 150px;
+            left: 30px;
+        }
+
+        table {
+            width: 850px;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        th {
+            text-align: left;
+            background-color: #55608f;
+        }
+
+        tbody tr:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        tbody td {
+            position: relative;
+        }
+
+        tbody td:hover::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        legend {
+            color: #fff;
+            font-size: 30px;
+        }
+
+        .tick::after {
+            content: "";
+            background-image: url(https://ifc.com.hk/media/tick.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 24px 24px;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+
+        }
+
+        td a {
+            color: rgb(194, 241, 194);
+        }
+
+        iframe {
+            position: absolute;
+            left: 1140px;
+            top: 130px;
+        }
+    </style>
+
+    <title>
+        LeungWingShanPersonalHomepage
+    </title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="headerinside">
+                <img src="https://cdn.dribbble.com/users/523399/screenshots/1498317/eye_dribbble_800px.gif"
+                    width="110px" alt="icon" style="background:transparent;">
+
+            </div>
+        </header>
+        <div class="content">
+            <div class="parallax1 set">
+                <div class="contain">
+                    <div class="openingleft">
+                    </div>
+                    <div class="openingword">
+                        <h1>ABOUT ME</h1>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="intro">
+                <h1 class="name">Leung Wing Shan</h1>
+                <h2>A college student from PolyU. Currently studying <a
+                        href="https://en.wikipedia.org/wiki/Data_science" target="_blank">Data Science and Analytic</a>.
+                    Passionate about programming and hope to work in
+                    related fields in the future.</h2>
+            </div>
+
+            <div class="set parallax3 ">
+                <div class="contain">
+                    <div class="openingleft">
+                    </div>
+                    <div class="openingword">
+                        <h1>Introduction</h1>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            <div class="parallax2 set">
+                <div class="description">
+                    <div class="popset">
+
+                        <img src="https://i.pinimg.com/736x/12/56/00/1256000a71e6e0fbcd09c8505529889f.jpg"
+                            alt="my picture" width="350px" height="400px">
+
+                        <img src="https://popcat.click/twitter-card.jpg" alt="my picture" width="350px" height="400px"
+                            class="topimg">
+
+                    </div>
+
+                    <div class="descriptionp">
+                        <p>
+                            <strong>(It is me)</strong>
+                            I love programming. As a fun seeker, I like trying to build some mini games and train my
+                            skill.
+                            Sitting in front of the computer for more than 8-10 hours a day is a daily routine, but I
+                            never
+                            get tired of it. On the contrary, I enjoy it. One might say you should study computer
+                            science
+                            instead of data science. Totally agree at this moment because I confirmed my interest for
+                            past 2
+                            years study that statistic is not what I like. However, getting the degree is not a bad
+                            thing so
+                            I will finish the sutdy first and work on programming related area in the future.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parallax4 set">
+
+                <div class="tableset">
+                    <table>
+                        <legend>Differnt programming language</legend>
+                        <thead>
+                            <tr>
+                                <th>\</th>
+                                <th>Language type</th>
+                                <th>Wikipedia</th>
+                                <th>Offical website</th>
+                                <th>Learned</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th>Python</th>
+                                <td>High-level language</td>
+                                <td><a href="https://en.wikipedia.org/wiki/Python_(programming_language)"
+                                        target="iframeset">https://en.wikipedia.org/wiki/Python_(programming_language)</a>
+                                </td>
+                                <td><a href="https://www.python.org/" target="iframeset">https://www.python.org/</a>
+                                </td>
+                                <td class="tick"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Html</th>
+                                <td>Markup language</td>
+                                <td><a href="https://en.wikipedia.org/wiki/HTML"
+                                        target="iframeset">https://en.wikipedia.org/wiki/HTML</a></td>
+                                <td><a href=" https://html.spec.whatwg.org/multipage/" target="iframeset">
+                                        https://html.spec.whatwg.org/multipage/</a></td>
+                                <td class="tick"></td>
+                            </tr>
+                            <tr>
+                                <th>R</th>
+                                <td>Low-level language</td>
+                                <td><a href="https://en.wikipedia.org/wiki/R_(programming_language)"
+                                        target="iframeset">https://en.wikipedia.org/wiki/R_(programming_language)</a>
+                                </td>
+                                <td><a href="https://www.r-project.org/"
+                                        target="iframeset">https://www.r-project.org/</a></td>
+                                <td class="tick"></td>
+                            </tr>
+                            <tr>
+                                <th>C++</th>
+                                <td>High-level language</td>
+                                <td><a href="https://en.wikipedia.org/wiki/C%2B%2B"
+                                        target="iframeset">https://en.wikipedia.org/wiki/C%2B%2B</a></td>
+                                <td><a href="https://isocpp.org/" target="iframeset">https://isocpp.org/</a></td>
+                                <td class="tick"></td>
+                            </tr>
+                            <tr>
+                                <th>SQL</th>
+                                <td>Data-oriented language</td>
+                                <td><a href="https://en.wikipedia.org/wiki/SQL"
+                                        target="iframeset">https://en.wikipedia.org/wiki/SQL</a></td>
+                                <td><a href="https://www.mysql.com/" target="iframeset">https://www.mysql.com/</a></td>
+                                <td class="tick"></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <iframe src="https://distantjob.com/blog/programming-languages-rank/" name="iframeset" height="600px"
+                    width="500px" title="website"></iframe>
+            </div>
+        </div>
+        <footer>
+            <p>Website Designed by Leung Wing Shan</p>
+        </footer>
+    </div>
+</body>
+
+</html>
